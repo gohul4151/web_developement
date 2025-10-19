@@ -1,0 +1,12 @@
+{
+  "name": "memory_todo",
+  "version": "1.0.0",
+  "main": "m_todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

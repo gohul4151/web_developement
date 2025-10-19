@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+    <script>
+        const t=document.querySelector("input").value;
+        fetch('/',{
+            methods:'Post',
+            body:JSON.stringify({
+                to:t
+            })
+        })
+        .then(response => response.json()) 
+    </script>
+</body>
+</html>

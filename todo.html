@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1>todo list</h1>
+        <input type="text" placeholder="new todo">
+        <button onclick="addto()">add</button>
+        <script>
+            let c=0;
+            function addto() {
+                const t=document.querySelector("input").value;
+                const el=document.createElement("div");
+                el.innerHTML= "<div id="+c+">"+t+"<button onclick='delectdo("+c+")'>delect</button></div>";
+                document.querySelector("body").appendChild(el);
+                c+=1;
+                
+            }
+            function delectdo(a)
+            {
+                const d=document.getElementById(a);
+                d.remove();
+            }
+        </script>
+    </body>
+</html>
