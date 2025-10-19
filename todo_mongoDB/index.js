@@ -5,7 +5,6 @@ const {usermodel,todomodel} = require("./db.js");
 const JWT_SECRET="iloveh";
 const jwt=require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-mongoose.connect("mongodb+srv://gohul4151:l0CuxIReNPQHJeFh@cluster0.wmlpvp8.mongodb.net/gohul");
 app.use(express.json())
 app.post("/signup",async function(req,res){
     const name=req.body.name;
@@ -102,4 +101,9 @@ function auth(req,res,next)
     res.status(500).json({ error: "Authentication failed" });
   }
 }
-app.listen(3000);
+function main()
+{
+    mongoose.connect("mongodb+srv://gohul4151:l0CuxIReNPQHJeFh@cluster0.wmlpvp8.mongodb.net/gohul");
+    app.listen(3000);
+}
+main();
